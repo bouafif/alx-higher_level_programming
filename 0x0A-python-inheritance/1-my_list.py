@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """defines an inherited list class Mylist"""
 
+
 class MyList(list):
     """Class with method print_sorted"""
     pass
