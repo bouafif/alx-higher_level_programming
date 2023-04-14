@@ -1,3 +1,7 @@
+#!/usr/bin/python3
+"""Create a function def pascal_triangle(n)"""
+
+
 def pascal_triangle(n):
     """
     Generate Pascal's triangle up to the n-th row and return it as a list
