@@ -147,7 +147,8 @@ class Rectangle(Base):
 
     def display(self):
         """
-        Print the Rectangle instance with the character '#' to stdout.
+        Print the Rectangle instance with the character '#' to stdout,
+        accounting for x and y coordinates.
         """
         for i in range(self.y):
             print()
