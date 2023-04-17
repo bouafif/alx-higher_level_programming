@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+"""class representing a square that inherits from rectangle class"""
 from models.rectangle import Rectangle
 
 
@@ -13,6 +15,22 @@ class Square(Rectangle):
         are validated using the same logic as in Rectangle.
         """
         super().__init__(size, size, x, y, id)
+
+    @property
+    def size(self):
+        """
+        Getter method for size attribute.
+        """
+        return self.width
+
+    @size.setter
+    def size(self, value):
+        """
+        Setter method for size attribute.
+        Sets width and height to the same value.
+        """
+        self.width = value
+        self.height = value
 
     def __str__(self):
         """
