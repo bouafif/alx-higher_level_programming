@@ -161,15 +161,16 @@ class Rectangle(Base):
         Returns:
             str: Formatted string representation of the rectangle.
         """
-        return f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
+        return f"[Rectangle] ({self.id}) {self.x}/{self.y} - " \
+            f"{self.width}/{self.height}"
 
     def update(self, *args, **kwargs):
         """
-        Assign provided key/value arguments to the respective attributes in **kwargs
-        dictionary, or the provided arguments in *args, in the order: id, width, height, x, y.
+        Assign provided key/value arguments to the respective attributes
+        in **kwargs dictionary, or the provided arguments in *args,
+        in the order: id, width, height, x, y.
         """
         if args:
-            # If *args exists and is not empty, assign values from *args to attributes in order
             if len(args) >= 1:
                 self.id = args[0]
             if len(args) >= 2:
@@ -181,7 +182,6 @@ class Rectangle(Base):
             if len(args) >= 5:
                 self.y = args[4]
         elif kwargs:
-            # If **kwargs exists and is not empty, assign values from **kwargs to attributes by key
             for key, value in kwargs.items():
                 setattr(self, key, value)
 
