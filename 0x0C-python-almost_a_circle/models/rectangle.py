@@ -184,3 +184,13 @@ class Rectangle(Base):
             # If **kwargs exists and is not empty, assign values from **kwargs to attributes by key
             for key, value in kwargs.items():
                 setattr(self, key, value)
+
+    def to_dictionary(self):
+        """Return the dictionary representation of the Rectangle"""
+        return {
+                "id": self.id,
+                "width": self.width,
+                "height": self.height,
+                "x": self.x,
+                "y": self.y
+                }
