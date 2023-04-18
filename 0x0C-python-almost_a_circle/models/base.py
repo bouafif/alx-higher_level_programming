@@ -96,9 +96,12 @@ class Base:
             list: List of instances loaded from the JSON file.
         """
         filename = cls.__name__ + ".json"
+        instances = []
         try:
             with open(filename, "r") as jsonfile:
-                list_dicts = Base.from_json_string(jsonfile.read())
-                return [cls.create(**d) for d in list_dicts]
-            except IOError:
-                return []
+                json_string = jsonfile.read()
+                list_dicts = Base.from_json_string(json_string)
+                instances = [cls.create(**d) for d in list_dicts]
+        except FileNotFoundError:
+            pass
+        return instances
