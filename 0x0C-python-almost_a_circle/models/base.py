@@ -60,9 +60,11 @@ class Base:
     @staticmethod
     def from_json_string(json_string):
         """
-        Static method that returns the list of the JSON string representation json_string.
+        Static method that returns the list of the JSON string
+        representation json_string.
         Args:
-            json_string (str): JSON string representation of a list of dictionaries.
+            json_string (str): JSON string representation
+            of a list of dictionaries.
         Returns:
             list: List of instances represented by the JSON string.
         """
